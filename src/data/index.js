@@ -49,6 +49,28 @@ export const otherTech = [
         id: 2,
         skillName: "Git"
     },
-   
+]
 
+export const projects = [
+    {
+        id: 1,
+        projectName: "SocialApp",
+        projectLink : "",
+        projectSkill: [
+            {
+                id: 1,
+
+            }
+    ]
+    },
+    {
+        id: 2, 
+        projectName: "FitnessApp",
+        projectLink: "",
+        projectSkill: [
+            {
+                id: 1
+            }
+        ]
+    }
 ]
