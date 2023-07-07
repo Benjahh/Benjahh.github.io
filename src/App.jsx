@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <div className=" w-screen font h-screen">
+    <div className=" w-screen bg-black font h-screen">
       <Navbar/>
       <HomePage/>
       <AboutPage/>

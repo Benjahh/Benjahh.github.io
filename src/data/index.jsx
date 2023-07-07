@@ -10,6 +10,7 @@ import {
     SiCss3,
     SiMongodb,
     SiGit,
+    SiRedux
 
 } from "react-icons/si"
 
@@ -75,6 +76,11 @@ export const otherTech = [
         skillName: "Git",
         Icon: <SiGit/>
     },
+    {
+        id: 3,
+        skillName: "Redux",
+        Icon: <SiRedux/>
+    }
 ]
 
 export const projects = [
