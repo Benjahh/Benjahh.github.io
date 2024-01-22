@@ -43,34 +43,37 @@ export const HomeGrid = ({ handleViewProjects }) => {
         </div>
       </div>
 
-      <div className="test-border bg-opacity-35 bg-yellow-500 row-span-3 col-span-2">
+      <div className="test-border bg-opacity-35 bg-purple-500 row-span-3 col-span-2">
         WEATHER
       </div>
 
       <motion.a
         whileHover={{ scale: 1.03, borderColor: 'white' }}
-        className="test-border hover:cursor-pointer flex-col relative bg-opacity-50 bg-firstAccent justify-center col-span-3 row-span-3 flex items-center "
+        className="test-border font-montserrat hover:cursor-pointer flex-col relative bg-opacity-50 bg-firstAccent justify-center col-span-3 row-span-3 flex items-center "
       >
         <h1>Checkout my Github.</h1>
         <p>¡Source code for my projects availalbe!</p>
         <FiGithub size={40} className="absolute top-0 right-0 m-8" />
       </motion.a>
 
-      <motion.div className="test-border bg-opacity-35 bg-orange-500 row-span-3 text-4xl">
+      <motion.div className="test-border bg-opacity-35 bg-yellow-500 row-span-3 text-4xl">
         EN-ES?
       </motion.div>
 
       <motion.div
         whileHover={{ scale: 1.03, borderColor: 'white' }}
-        className="test-border text-4xl bg-opacity-35 bg-purple-500 col-span-4 hover:cursor-pointer hover:brightness-75 hover row-span-3 "
+        className=" text-4xl test-border relative overflow-hidden col-span-4 hover:cursor-pointer hover:brightness-75  row-span-3 "
         onClick={handleViewProjects}
       >
-        Projects
+        <div className="opacity-35 bg-coding absolute bg-no-repeat h-full  w-full">
+          {' '}
+        </div>
+        <div className="opacity-100">Projects</div>
       </motion.div>
 
       <motion.button
         whileHover={{ scale: 1.03, borderColor: 'white' }}
-        className="test-border bg-opacity-35 bg-teal-500 col-span-2 row-span-3"
+        className="test-border bg-opacity-35  bg-teal-500 col-span-2 row-span-3"
       >
         <CiMail size={80} />
       </motion.button>

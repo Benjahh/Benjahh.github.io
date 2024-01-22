@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         noise: "url('./assets/noise.gif')",
+        coding:
+          "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url('./assets/coding.gif')",
       },
 
       fontFamily: {
