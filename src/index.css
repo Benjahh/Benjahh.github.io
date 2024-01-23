@@ -7,7 +7,7 @@
 
 .page__wrapper {
   @apply relative w-full
-   max-w-[1400px] py-20   h-ful l flex flex-col gap-5;
+   max-w-[1400px] py-20   h-full flex flex-col gap-5;
 }
 
 .test-border {

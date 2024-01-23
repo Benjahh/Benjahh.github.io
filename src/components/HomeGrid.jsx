@@ -8,8 +8,11 @@ import { FaLinkedinIn } from 'react-icons/fa';
 
 export const HomeGrid = ({ handleViewProjects }) => {
   return (
-    <motion.div className=" w-full  grid grid-cols-6 auto-rows-[100px] gap-4">
-      <header className="test-border bg-secondAccent bg-opacity-50 col-span-4 relative  flex flex-col row-span-6">
+    <motion.div
+      className=" w-full  grid grid-cols-8
+     auto-rows-[100px] gap-4"
+    >
+      <header className="test-border bg-secondAccent bg-opacity-50 col-span-6 relative  flex flex-col row-span-6">
         <Hero />
         <motion.p className="absolute bottom-0 left-0 m-10 text-2xl font-semibold font-montserrat max-w-2xl text-thirdAccent">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
@@ -21,16 +24,14 @@ export const HomeGrid = ({ handleViewProjects }) => {
       <motion.a
         whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
         transition={{ duration: 0.3 }}
-        className="test-border  hover:cursor-pointer bg-opacity-50 bg-[#0e76a8]  justify-center  col-span-1 row-span-2 flex items-center "
+        className="test-border  hover:cursor-pointer bg-opacity-50 bg-[#0e76a8]  justify-center  col-span-2 row-span-3 flex items-center "
       >
         <FaLinkedinIn size={120} />
       </motion.a>
-      <div className="test-border font-montserrat bg-red-500 bg-opacity-50 font-semibold text-md col-span-1 row-span-2 flex flex-col  ">
-        <h2>My Age</h2>
-        <h1 className="text-4xl font-bebasNeue">20</h1>
-        <h2>Year's old.</h2>
+      <div className="test-border font-montserrat bg-amber-400 bg-opacity-50 font-semibold text-md col-span-2 row-span-3 flex flex-col  ">
+        Resume
       </div>
-      <div className="test-border bg-opacity-50 relative bg-green-500 gap-2 flex-col col-span-2 row-span-4 flex items-center justify-center">
+      <div className="test-border bg-opacity-50 relative bg-green-500 gap-2 flex-col col-span-2 row-span-3 flex items-center justify-center">
         <h1 className="font-bebasNeue font-semibold text-7xl  text-thirdAccent absolute ">
           Tech Stack
         </h1>
@@ -46,18 +47,18 @@ export const HomeGrid = ({ handleViewProjects }) => {
       <motion.a
         whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
         transition={{ duration: 0.3 }}
-        className="test-border  overflow-hidden bg-opacity-50   object-cover hover:cursor-pointer flex-col relative  bg-firstAccent justify-center col-span-3 row-span-3 flex items-center "
+        className="test-border  overflow-hidden bg-opacity-50   object-cover hover:cursor-pointer flex-col relative  bg-firstAccent justify-center col-span-4 row-span-3 flex items-center "
       >
         <div className="bg-github opacity-50 bg-contain  absolute  bg-no-repeat h-full w-full" />
         <h1 className="text-white font-bebasNeue  text-4xl absolute top-0 left-0 m-10 brightness-125">
-          CHECKOUT MY GITHUB
+          My Github Profile
         </h1>
         <p className="brightness-125 text-thirdAccent font-semibold  font-montserrat text-xl absolute  bottom-0 m-10 ">
           ¡Source code for all my projects available there!
         </p>
         <FiGithub size={40} className="absolute top-0 right-0 m-8" />
       </motion.a>
-      <motion.div className="test-border bg-opacity-35 bg-yellow-500 row-span-3 text-4xl">
+      <motion.div className="test-border bg-opacity-35 col-span-2 bg-orange-400 row-span-3 text-4xl">
         EN-ES?
       </motion.div>
 
