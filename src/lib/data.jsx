@@ -5,6 +5,9 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiPostgresql,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
 } from 'react-icons/si';
 
 export const heroText = [
@@ -182,5 +185,20 @@ export const techStack = [
     id: '6',
     techName: 'PostgreSQL',
     TechIcon: <SiPostgresql size={50} />,
+  },
+  {
+    id: '7',
+    techName: 'CSS3',
+    TechIcon: <SiCss3 size={50} />,
+  },
+  {
+    id: '8',
+    techName: 'HTML5',
+    TechIcon: <SiHtml5 size={50} />,
+  },
+  {
+    id: '9',
+    techName: 'Javascript',
+    TechIcon: <SiJavascript size={50} />,
   },
 ];

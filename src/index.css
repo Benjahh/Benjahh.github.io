@@ -6,11 +6,11 @@
 @tailwind utilities;
 
 .page__wrapper {
-  @apply relative h-auto w-full
-   max-w-5xl flex flex-col gap-5;
+  @apply relative w-full
+   max-w-[1400px] py-20   h-full flex flex-col gap-5;
 }
 
 .test-border {
-  @apply justify-center border-fourthAccent items-center
-  flex border rounded-2xl p-8;
+  @apply justify-center   items-center
+  flex rounded-2xl p-8;
 }
