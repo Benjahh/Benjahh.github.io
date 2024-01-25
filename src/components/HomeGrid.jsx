@@ -1,81 +1,116 @@
 import { motion } from 'framer-motion';
 import { Hero } from './hero';
-import { SiLinkedin } from 'react-icons/si';
-import { FiGithub } from 'react-icons/fi';
-import { CiMail } from 'react-icons/ci';
+import { FiExternalLink } from 'react-icons/fi';
+import { IoIosMail } from 'react-icons/io';
 import { TechStack } from './TechStack';
 import { techStack } from '@/lib/data';
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaFileDownload,
+  FaAngleDoubleDown,
+} from 'react-icons/fa';
 
 export const HomeGrid = ({ handleViewProjects }) => {
   return (
-    <motion.div className=" w-full grid grid-cols-6 grid-rows-12  gap-4">
-      <header className="test-border bg-fourthAccent bg-opacity-50 col-span-4 relative  flex flex-col row-span-6">
-        <Hero />
-        <motion.p className="absolute bottom-0 left-0 m-10 font-semibold font-montserrat max-w-lg text-thirdAccent">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          animi rem accusantium porro maiores cum laborum natus hic doloribus
-          aut iste unde explicabo dolorum, reprehenderit dolor. Unde adipisci
-          nesciunt cum!
-        </motion.p>
-      </header>
-
-      <motion.a
-        whileHover={{ scale: 1.03, borderColor: 'white' }}
-        className="test-border  hover:cursor-pointer bg-opacity-50 bg-[#0e76a8]  justify-center  col-span-1 row-span-2 flex items-center "
-      >
-        <SiLinkedin size={80} />
-      </motion.a>
-
-      <div className="test-border font-montserrat bg-red-500 bg-opacity-50 font-semibold text-md col-span-1 row-span-2 flex flex-col  ">
-        <h2>My Age</h2>
-        <h1 className="text-4xl font-bebasNeue">20</h1>
-        <h2>Year's old.</h2>
+    <motion.div
+      className=" w-full  grid grid-cols-8
+     auto-rows-[100px] gap-4"
+    >
+      <div className="test-border relative bg-secondAccent bg-opacity-50 col-span-6  row-span-6">
+        <div className=" absolute left-0 m-10 flex flex-col  max-w-4xl gap-8 bottom-0">
+          <Hero />
+          <motion.p className=" bottom-0 left-0 text-2xl font-semibold  font-montserrat  text-thirdAccent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            animi rem accusantium porro maiores cum laborum natus hic doloribus
+            aut iste unde explicabo dolorum, reprehenderit dolor. Unde adipisci
+            nesciunt cum!
+          </motion.p>
+        </div>
       </div>
 
-      <div className="test-border bg-opacity-50 relative bg-green-500 gap-2 flex-col col-span-2 row-span-4 flex items-center justify-center">
+      <motion.a
+        whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
+        transition={{ duration: 0.3 }}
+        className="test-border relative  hover:cursor-pointer bg-opacity-50 bg-[#0e76a8]  justify-center  col-span-2 row-span-3 flex items-center "
+      >
+        <FiExternalLink className="absolute top-0 right-0  m-10" size={20} />
+        <FaLinkedinIn size={120} />
+      </motion.a>
+
+      <motion.a
+        whileHover={{ scale: 1.02, filter: 'brightness(110%)' }}
+        transition={{ duration: 0.3 }}
+        className="test-border font-montserrat text-center gap-8 text-xl hover:cursor-pointer bg-amber-400 bg-opacity-50 font-bold text-md col-span-2 row-span-3 flex flex-col  "
+      >
+        <h1>¿Want to know more about me?</h1>
+        <FaFileDownload size={120} />
+        <h1>Download my Resume</h1>
+      </motion.a>
+
+      <div className="test-border bg-opacity-50 relative bg-green-500 gap-2 flex-col col-span-2 row-span-3 flex items-center justify-center">
         <h1 className="font-bebasNeue font-semibold text-7xl  text-thirdAccent absolute ">
           Tech Stack
         </h1>
-        <div className="grid-cols-2 z-10  items-center justify-center grid-rows-3 w-full grid gap-4 font-montserrat font-semibold">
+        <div className="grid-cols-3 z-10  gap-2 items-center justify-items-center  grid-rows-3 w-full grid  font-montserrat font-semibold">
           {techStack.map(({ techName, TechIcon, id }) => (
             <TechStack key={id} techName={techName} TechIcon={TechIcon} />
           ))}
         </div>
       </div>
 
-      <div className="test-border bg-opacity-35 bg-purple-500 row-span-3 col-span-2">
+      <div className="test-border bg-opacity-50 bg-purple-500 row-span-3 col-span-2">
         WEATHER
       </div>
 
       <motion.a
-        whileHover={{ scale: 1.03, borderColor: 'white' }}
-        className="test-border font-montserrat hover:cursor-pointer flex-col relative bg-opacity-50 bg-firstAccent justify-center col-span-3 row-span-3 flex items-center "
+        whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
+        transition={{ duration: 0.3 }}
+        className="test-border  overflow-hidden bg-opacity-50   object-cover hover:cursor-pointer flex-col relative  bg-firstAccent justify-center col-span-4 row-span-3 flex items-center "
       >
-        <h1>Checkout my Github.</h1>
-        <p>¡Source code for my projects availalbe!</p>
-        <FiGithub size={40} className="absolute top-0 right-0 m-8" />
+        <div className="bg-github opacity-60 bg-contain  absolute  bg-no-repeat h-full w-full" />
+        <header className="absolute bottom-0 left-0 p-10 gap-1 flex flex-col">
+          <h1 className="text-white tracking-wide font-bebasNeue  text-4xl brightness-125">
+            My Github Profile
+          </h1>
+          <p className="brightness-125 text-thirdAccent font-semibold  font-montserrat text-2xl  ">
+            ¡Source code for all my projects available there!
+          </p>
+        </header>
+        <FiExternalLink className="absolute top-0 right-0  m-10" size={20} />
+        <FaGithub size={40} className="absolute top-0 left-0 m-10" />
       </motion.a>
 
-      <motion.div className="test-border bg-opacity-35 bg-yellow-500 row-span-3 text-4xl">
+      <motion.div className="test-border bg-opacity-50 col-span-2 bg-red-500 row-span-3 text-4xl">
         EN-ES?
       </motion.div>
 
-      <motion.div
-        whileHover={{ scale: 1.03, borderColor: 'white' }}
-        className=" text-4xl test-border relative overflow-hidden col-span-4 hover:cursor-pointer hover:brightness-75  row-span-3 "
+      <motion.a
+        whileHover={{ scale: 1.02, filter: 'brightness(110%)' }}
+        transition={{ duration: 0.3 }}
+        className=" text-4xl test-border bg-opacity-50  relative overflow-hidden  col-span-4 hover:cursor-pointer row-span-3 "
         onClick={handleViewProjects}
       >
-        <div className="opacity-35 bg-coding absolute bg-no-repeat h-full  w-full">
-          {' '}
-        </div>
-        <div className="opacity-100">Projects</div>
-      </motion.div>
+        <div className=" bg-coding opacity-60  absolute bg-no-repeat h-full  w-full"></div>
+        <header className="absolute top-0 left-0 p-10 gap-1 flex flex-col">
+          <h1 className=" brightness-125 tracking-wide text-4xl font-bebasNeue   ">
+            Projects
+          </h1>
+          <p className="brightness-125 text-thirdAccent font-semibold  font-montserrat text-2xl">
+            Web applications i've made honing my skills.
+          </p>
+        </header>
+        <FaAngleDoubleDown size={20} className="absolute bottom-0 m-10" />
+      </motion.a>
 
       <motion.button
-        whileHover={{ scale: 1.03, borderColor: 'white' }}
-        className="test-border bg-opacity-35  bg-teal-500 col-span-2 row-span-3"
+        transition={{ duration: 0.3 }}
+        whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
+        className="test-border bg-opacity-50 relative flex flex-col text-xl bg-blue-500 col-span-2 row-span-3"
       >
-        <CiMail size={80} />
+        <h1>Lets get in touch.</h1>
+        <IoIosMail size={120} />
+        <FiExternalLink className="absolute top-0 right-0  m-10" size={20} />
       </motion.button>
     </motion.div>
   );

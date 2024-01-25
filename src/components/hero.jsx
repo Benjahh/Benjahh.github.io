@@ -27,7 +27,7 @@ export const Hero = () => {
   };
 
   return (
-    <h1 className="absolute top-0 m-10">
+    <header className="-2 flex flex-col gap-4">
       <motion.h1
         initial="hidden"
         animate="visible"
@@ -39,28 +39,28 @@ export const Hero = () => {
       >
         {words.map((word, idx) => (
           <motion.div
-            className={`flex overflow-hidden ${idx === 1 && 'pl-16'}`}
+            className={`flex overflow-hidden   ${idx === 1 && 'pl-16'}`}
             key={idx}
           >
             {word.map((element, subIdx) => (
               <motion.div
-                className="  overflow-hidden  h-[50px] w-[20px]  items-center justify-center flex"
+                className="w-8 items-center justify-center flex"
                 variants={childrenVariant}
                 key={subIdx}
               >
-                <motion.text
+                <motion.div
                   variants={variant}
                   initial="hidden"
                   animate="visible"
-                  className="block font-bebasNeue w-auto h-auto text-white text-5xl"
+                  className="block font-bebasNeue w-auto h-auto text-white text-7xl"
                 >
                   {element}
-                </motion.text>
+                </motion.div>
               </motion.div>
             ))}
           </motion.div>
         ))}
       </motion.h1>
-    </h1>
+    </header>
   );
 };

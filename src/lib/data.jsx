@@ -5,6 +5,9 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiPostgresql,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
 } from 'react-icons/si';
 
 export const heroText = [
@@ -156,31 +159,46 @@ export const techStack = [
   {
     id: '1',
     techName: 'Next.js',
-    TechIcon: <SiNextdotjs size={50} />,
+    TechIcon: <SiNextdotjs size={30} />,
   },
   {
     id: '2',
     techName: 'React',
-    TechIcon: <SiReact size={50} />,
+    TechIcon: <SiReact size={30} />,
   },
   {
     id: '3',
     techName: 'Node.js',
-    TechIcon: <SiNodedotjs size={50} />,
+    TechIcon: <SiNodedotjs size={30} />,
   },
   {
     id: '4',
     techName: 'Express.js',
-    TechIcon: <SiExpress size={50} />,
+    TechIcon: <SiExpress size={30} />,
   },
   {
     id: '5',
     techName: 'TailwindCSS',
-    TechIcon: <SiTailwindcss size={50} />,
+    TechIcon: <SiTailwindcss size={30} />,
   },
   {
     id: '6',
     techName: 'PostgreSQL',
-    TechIcon: <SiPostgresql size={50} />,
+    TechIcon: <SiPostgresql size={30} />,
+  },
+  {
+    id: '7',
+    techName: 'CSS3',
+    TechIcon: <SiCss3 size={30} />,
+  },
+  {
+    id: '8',
+    techName: 'HTML5',
+    TechIcon: <SiHtml5 size={30} />,
+  },
+  {
+    id: '9',
+    techName: 'Javascript',
+    TechIcon: <SiJavascript size={30} />,
   },
 ];

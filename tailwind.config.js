@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         noise: "url('./assets/noise.gif')",
+        github:
+          "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url('./assets/github.gif')",
         coding:
           "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url('./assets/coding.gif')",
       },
@@ -27,7 +29,6 @@ module.exports = {
         firstAccent: '#0F0F0F',
         secondAccent: '#27272A',
         thirdAccent: '#A1A1AA',
-        fourthAccent: '#27272A',
       },
     },
   },
