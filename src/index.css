@@ -5,9 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .page__wrapper {
   @apply relative w-full
-   max-w-[1400px] py-20   h-full flex flex-col gap-5;
+   max-w-[1400px] py-24   h-full flex flex-col gap-5;
 }
 
 .test-border {

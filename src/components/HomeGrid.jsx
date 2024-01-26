@@ -15,13 +15,25 @@ import { Children } from 'react';
 const variant = {
   hidden: {
     opacity: 0,
-    y: '50%',
   },
   visible: {
     opacity: 1,
-    y: 0,
     transition: {
       staggerChildren: 0.1,
+    },
+  },
+};
+
+const childrenVariant = {
+  hidden: {
+    opacity: 0,
+    x: '190%',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: 'easeOut',
     },
   },
 };
@@ -33,11 +45,11 @@ export const HomeGrid = ({ handleViewProjects }) => {
       animate="visible"
       variants={variant}
       transition={{ duration: 1 }}
-      className=" w-full grid grid-cols-8
+      className=" w-full h-full grid grid-cols-8  overflow-hidden
      auto-rows-[100px] gap-4"
     >
       <motion.div
-        variants={variant}
+        variants={childrenVariant}
         className="test-border relative bg-secondAccent bg-opacity-50 col-span-6  row-span-6"
       >
         <div className=" absolute left-0 m-10 flex flex-col  max-w-4xl gap-8 bottom-0">
@@ -54,7 +66,7 @@ export const HomeGrid = ({ handleViewProjects }) => {
       <motion.a
         whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
         transition={{ duration: 0.3 }}
-        variants={variant}
+        variants={childrenVariant}
         className="test-border relative  hover:cursor-pointer bg-opacity-50 bg-[#0e76a8]  justify-center  col-span-2 row-span-3 flex items-center "
       >
         <FiExternalLink className="absolute top-0 right-0  m-10" size={20} />
@@ -62,7 +74,7 @@ export const HomeGrid = ({ handleViewProjects }) => {
       </motion.a>
 
       <motion.a
-        variants={variant}
+        variants={childrenVariant}
         whileHover={{ scale: 1.02, filter: 'brightness(110%)' }}
         transition={{ duration: 0.3 }}
         className="test-border font-montserrat text-center gap-8 text-xl hover:cursor-pointer bg-amber-400 bg-opacity-50 font-bold text-md col-span-2 row-span-3 flex flex-col  "
@@ -73,7 +85,7 @@ export const HomeGrid = ({ handleViewProjects }) => {
       </motion.a>
 
       <motion.div
-        variants={variant}
+        variants={childrenVariant}
         className="test-border bg-opacity-50 relative bg-green-500 gap-2 flex-col col-span-2 row-span-3 flex items-center justify-center"
       >
         <h1 className="font-bebasNeue font-semibold text-7xl  text-thirdAccent absolute ">
@@ -87,14 +99,14 @@ export const HomeGrid = ({ handleViewProjects }) => {
       </motion.div>
 
       <motion.div
-        variants={variant}
+        variants={childrenVariant}
         className="test-border bg-opacity-50 bg-purple-500 row-span-3 col-span-2"
       >
         WEATHER
       </motion.div>
 
       <motion.a
-        variants={variant}
+        variants={childrenVariant}
         whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
         transition={{ duration: 0.3 }}
         className="test-border  overflow-hidden bg-opacity-50   object-cover hover:cursor-pointer flex-col relative  bg-firstAccent justify-center col-span-4 row-span-3 flex items-center "
@@ -113,14 +125,14 @@ export const HomeGrid = ({ handleViewProjects }) => {
       </motion.a>
 
       <motion.div
-        variants={variant}
+        variants={childrenVariant}
         className="test-border bg-opacity-50 col-span-2 bg-red-500 row-span-3 text-4xl"
       >
         EN-ES?
       </motion.div>
 
       <motion.a
-        variants={variant}
+        variants={childrenVariant}
         whileHover={{ scale: 1.02, filter: 'brightness(110%)' }}
         transition={{ duration: 0.3 }}
         className=" text-4xl test-border bg-opacity-50  relative overflow-hidden  col-span-4 hover:cursor-pointer row-span-3 "
@@ -139,7 +151,7 @@ export const HomeGrid = ({ handleViewProjects }) => {
       </motion.a>
 
       <motion.button
-        variants={variant}
+        variants={childrenVariant}
         transition={{ duration: 0.3 }}
         whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
         className="test-border bg-opacity-50 relative flex flex-col text-xl bg-blue-500 col-span-2 row-span-3"

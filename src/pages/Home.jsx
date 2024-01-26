@@ -16,7 +16,7 @@ export const Home = () => {
   };
 
   return (
-    <section ref={ref} className="page__wrapper ">
+    <section ref={ref} className="page__wrapper overflow-hidden ">
       <HomeGrid handleViewProjects={handleViewProjects} />
       {viewProjects && (
         <>

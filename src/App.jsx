@@ -2,7 +2,7 @@ import { Home } from '@/pages/home';
 
 function App() {
   return (
-    <main className="relative bg-noise  flex flex-col items-center justify-center  text-white h-auto w-auto">
+    <main className="relative bg-noise overflow-hidden  flex flex-col items-center justify-center  text-white h-full w-auto">
       <Home />
     </main>
   );
