@@ -11,6 +11,7 @@ import {
   FaAngleDoubleDown,
 } from 'react-icons/fa';
 import { Children } from 'react';
+import { Weather } from './Weather';
 
 const variant = {
   hidden: {
@@ -102,7 +103,7 @@ export const HomeGrid = ({ handleViewProjects }) => {
         variants={childrenVariant}
         className="test-border bg-opacity-50 bg-purple-500 row-span-3 col-span-2"
       >
-        WEATHER
+        <Weather />
       </motion.div>
 
       <motion.a
