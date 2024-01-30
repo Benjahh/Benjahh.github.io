@@ -2,24 +2,54 @@ import { useState, useEffect } from 'react';
 
 export const Weather = () => {
   const [weather, setWeather] = useState('');
-  console.log(weather);
-  useEffect(() => {
+  const [time, setTime] = useState('');
+
+  console.log(time);
+
+  const getTime = (timezone) => {
+    const localTime = new Date().getTime();
+    const localOffset = new Date().getTimezoneOffset() * 60000;
+    const currentUtcTime = localOffset + localTime;
+    const cityOffset = currentUtcTime + 1000 * timezone;
+    const cityTime = new Date(cityOffset).toTimeString().split('')[0];
+    setTime(cityTime[0]);
+  };
+
+  const fetchWeather = () => {
     try {
       fetch(
-        'http://api.weatherapi.com/v1/current.json?key=94ceaeef5f804101acb30452242801&q=Asuncion&aqi=no'
+        'http://api.openweathermap.org/data/2.5/weather?q=Paraguay&type=hour&id=524901&appid=b787b03041ac4071a60242f0aeb9066f&units=metric'
       )
-        .then((response) => response.json())
-        .then((data) => setWeather(data));
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          getTime(data.timezone);
+          setWeather(data);
+        });
     } catch (error) {
-      console.error(error.message);
+      console.error('Error fetching weather:', error.message);
     }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetchWeather();
+    }, 1000);
+
+    return () => clearInterval(interval);
   }, []);
+
   return (
-    <div>
-      {weather && (
+    <div className="">
+      {time && (
         <div>
-          <div>{weather.location.name}</div>
-          <div>{weather.location.localtime} </div>{' '}
+          <div className="absolute left-0 top-0 m-10 font-bebasNeue text-2xl tracking-wider">
+            <br />
+          </div>
+          <div className="absolute  bottom-0 right-0 font-montserra text-4xl m-10">
+            {time}
+          </div>
         </div>
       )}
     </div>

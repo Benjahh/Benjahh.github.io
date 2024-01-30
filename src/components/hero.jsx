@@ -27,7 +27,7 @@ export const Hero = () => {
   };
 
   return (
-    <header className="-2 flex flex-col gap-4">
+    <header className=" flex flex-col gap-4">
       <motion.h1
         initial="hidden"
         animate="visible"
@@ -35,16 +35,15 @@ export const Hero = () => {
         transition={{
           staggerChildren: 0.025,
         }}
-        className=""
       >
         {words.map((word, idx) => (
           <motion.div
-            className={`flex overflow-hidden   ${idx === 1 && 'pl-16'}`}
+            className={`flex overflow-hidden ${idx === 1 && 'pl-16'}`}
             key={idx}
           >
             {word.map((element, subIdx) => (
               <motion.div
-                className="w-8 items-center justify-center flex"
+                className="w-7 items-center justify-center flex"
                 variants={childrenVariant}
                 key={subIdx}
               >

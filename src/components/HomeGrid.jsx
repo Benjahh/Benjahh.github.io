@@ -46,12 +46,12 @@ export const HomeGrid = ({ handleViewProjects }) => {
       animate="visible"
       variants={variant}
       transition={{ duration: 1 }}
-      className=" w-full h-full grid grid-cols-8  overflow-hidden
+      className=" w-full h-full grid grid-cols-8  overflow-visible
      auto-rows-[100px] gap-4"
     >
       <motion.div
         variants={childrenVariant}
-        className="test-border relative bg-secondAccent bg-opacity-50 col-span-6  row-span-6"
+        className="test-border relative bg-secondAccent  col-span-6  row-span-6"
       >
         <div className=" absolute left-0 m-10 flex flex-col  max-w-4xl gap-8 bottom-0">
           <Hero />
@@ -65,10 +65,13 @@ export const HomeGrid = ({ handleViewProjects }) => {
       </motion.div>
 
       <motion.a
-        whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
+        whileHover={{
+          scale: 1.02,
+          backgroundColor: 'rgba(161, 161, 170, 0.5)',
+        }}
         transition={{ duration: 0.3 }}
         variants={childrenVariant}
-        className="test-border relative  hover:cursor-pointer bg-opacity-50 bg-[#0e76a8]  justify-center  col-span-2 row-span-3 flex items-center "
+        className="test-border relative  hover:cursor-pointer  bg-[#0e76a8]  justify-center  col-span-2 row-span-3 flex items-center "
       >
         <FiExternalLink className="absolute top-0 right-0  m-10" size={20} />
         <FaLinkedinIn size={120} />
@@ -76,9 +79,12 @@ export const HomeGrid = ({ handleViewProjects }) => {
 
       <motion.a
         variants={childrenVariant}
-        whileHover={{ scale: 1.02, filter: 'brightness(110%)' }}
+        whileHover={{
+          scale: 1.02,
+          backgroundColor: 'rgba(161, 161, 170, 0.5)',
+        }}
         transition={{ duration: 0.3 }}
-        className="test-border font-montserrat text-center gap-8 text-xl hover:cursor-pointer bg-amber-400 bg-opacity-50 font-bold text-md col-span-2 row-span-3 flex flex-col  "
+        className="test-border font-montserrat text-center gap-8 text-xl hover:cursor-pointer bg-amber-400 font-bold text-md col-span-2 row-span-3 flex flex-col  "
       >
         <h1>¿Want to know more about me?</h1>
         <FaFileDownload size={120} />
@@ -87,7 +93,7 @@ export const HomeGrid = ({ handleViewProjects }) => {
 
       <motion.div
         variants={childrenVariant}
-        className="test-border bg-opacity-50 relative bg-green-500 gap-2 flex-col col-span-2 row-span-3 flex items-center justify-center"
+        className="test-border relative bg-green-500 gap-2 flex-col col-span-2 row-span-3 flex items-center justify-center"
       >
         <h1 className="font-bebasNeue font-semibold text-7xl  text-thirdAccent absolute ">
           Tech Stack
@@ -101,18 +107,21 @@ export const HomeGrid = ({ handleViewProjects }) => {
 
       <motion.div
         variants={childrenVariant}
-        className="test-border bg-opacity-50 bg-purple-500 row-span-3 col-span-2"
+        className="test-border relative bg-purple-500 row-span-3 col-span-2"
       >
         <Weather />
       </motion.div>
 
       <motion.a
         variants={childrenVariant}
-        whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
+        whileHover={{
+          scale: 1.02,
+          backgroundColor: 'rgba(161, 161, 170, 0.5)',
+        }}
         transition={{ duration: 0.3 }}
-        className="test-border  overflow-hidden bg-opacity-50   object-cover hover:cursor-pointer flex-col relative  bg-firstAccent justify-center col-span-4 row-span-3 flex items-center "
+        className="test-border  overflow-hidden    object-cover hover:cursor-pointer flex-col relative  bg-firstAccent justify-center col-span-4 row-span-3 flex items-center "
       >
-        <div className="bg-github opacity-60 bg-contain  absolute  bg-no-repeat h-full w-full" />
+        <div className=" opacity-60 bg-contain  absolute  bg-no-repeat -z-10 h-full w-full" />
         <header className="absolute bottom-0 left-0 p-10 gap-1 flex flex-col">
           <h1 className="text-white tracking-wide font-bebasNeue  text-4xl brightness-125">
             My Github Profile
@@ -127,19 +136,22 @@ export const HomeGrid = ({ handleViewProjects }) => {
 
       <motion.div
         variants={childrenVariant}
-        className="test-border bg-opacity-50 col-span-2 bg-red-500 row-span-3 text-4xl"
+        className="test-border  col-span-2 bg-red-500 row-span-3 text-4xl"
       >
         EN-ES?
       </motion.div>
 
       <motion.a
         variants={childrenVariant}
-        whileHover={{ scale: 1.02, filter: 'brightness(110%)' }}
+        whileHover={{
+          scale: 1.02,
+          backgroundColor: 'rgba(161, 161, 170, 0.5)',
+        }}
         transition={{ duration: 0.3 }}
-        className=" text-4xl test-border bg-opacity-50  relative overflow-hidden  col-span-4 hover:cursor-pointer row-span-3 "
+        className=" text-4xl test-border   relative overflow-hidden  col-span-4 hover:cursor-pointer row-span-3 "
         onClick={handleViewProjects}
       >
-        <div className=" bg-coding opacity-60  absolute bg-no-repeat h-full  w-full"></div>
+        <div className=" opacity-60  absolute bg-no-repeat h-full  w-full"></div>
         <header className="absolute top-0 left-0 p-10 gap-1 flex flex-col">
           <h1 className=" brightness-125 tracking-wide text-4xl font-bebasNeue   ">
             Projects
@@ -155,7 +167,7 @@ export const HomeGrid = ({ handleViewProjects }) => {
         variants={childrenVariant}
         transition={{ duration: 0.3 }}
         whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
-        className="test-border bg-opacity-50 relative flex flex-col text-xl bg-blue-500 col-span-2 row-span-3"
+        className="test-border  relative flex flex-col text-xl bg-blue-500 col-span-2 row-span-3"
       >
         <h1>Lets get in touch.</h1>
         <IoIosMail size={120} />

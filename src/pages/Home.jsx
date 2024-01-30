@@ -15,7 +15,7 @@ export const Home = () => {
   };
 
   return (
-    <section className="page__wrapper overflow-hidden ">
+    <section className="page__wrapper overflow-visible ">
       <HomeGrid handleViewProjects={handleViewProjects} />
       {viewProjects && (
         <>

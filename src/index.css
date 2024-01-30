@@ -16,6 +16,6 @@ body {
 }
 
 .test-border {
-  @apply justify-center   items-center
+  @apply justify-center bg-opacity-50 bg-secondAccent border border-thirdAccent  items-center
   flex rounded-2xl p-8;
 }
