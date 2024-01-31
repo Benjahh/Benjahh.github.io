@@ -1,9 +1,8 @@
-import { useRef, useState } from 'react';
-import { HomeGrid } from '@/components/HomeGrid';
-import { ProjectGrid } from '@/components/ProjectGrid';
+import { useState } from 'react';
+import { HomeGrid } from '@/components/utils/HomeGrid';
+import { ProjectGrid } from '@/components/utils/ProjectGrid';
 
 export const Home = () => {
-  const ref = useRef(null);
   const [viewProjects, setViewProjects] = useState();
 
   console.log();
@@ -16,7 +15,7 @@ export const Home = () => {
   };
 
   return (
-    <section ref={ref} className="page__wrapper ">
+    <section className="page__wrapper overflow-visible ">
       <HomeGrid handleViewProjects={handleViewProjects} />
       {viewProjects && (
         <>
