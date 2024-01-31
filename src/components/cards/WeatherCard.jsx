@@ -41,7 +41,7 @@ export const WeatherCard = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="test-border bg-secondAccent">
       {time && (
         <div>
           <div className="absolute left-0 top-0 m-10 flex flex-col font-bebasNeue text-2xl ">

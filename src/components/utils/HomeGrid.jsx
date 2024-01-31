@@ -20,7 +20,7 @@ const variant = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -47,93 +47,71 @@ export const HomeGrid = ({ handleViewProjects }) => {
       variants={variant}
       transition={{ duration: 1 }}
       className=" w-full h-full grid grid-cols-8  overflow-visible
-     auto-rows-[150px] gap-4"
+     auto-rows-[100px] gap-4"
     >
-      <motion.div
+      <motion.article
         variants={childrenVariant}
-        className="test-border relative bg-secondAccent  col-span-6  row-span-6"
+        className="col-span-6  row-span-6"
       >
         <HeroCard />
-      </motion.div>
+      </motion.article>
 
-      <motion.div
-        whileHover={{
-          scale: 1.02,
-          backgroundColor: 'rgba(161, 161, 170, 0.5)',
-        }}
-        transition={{ duration: 0.3 }}
+      <motion.article
+        className="col-span-2 row-span-3"
         variants={childrenVariant}
-        className="test-border relative  hover:cursor-pointer  bg-[#0e76a8]  justify-center  col-span-2 row-span-3 flex items-center "
       >
         <LinkedInCard />
-      </motion.div>
+      </motion.article>
 
-      <motion.a
+      <motion.article
         variants={childrenVariant}
-        whileHover={{
-          scale: 1.02,
-          backgroundColor: 'rgba(161, 161, 170, 0.5)',
-        }}
-        transition={{ duration: 0.3 }}
-        className="test-border font-montserrat text-center gap-8 text-xl hover:cursor-pointer bg-amber-400 font-bold text-md col-span-2 row-span-3 flex flex-col  "
+        className="col-span-2 row-span-3"
       >
         <ResumeCard />
-      </motion.a>
+      </motion.article>
 
-      <motion.div
+      <motion.article
         variants={childrenVariant}
-        className="test-border relative bg-green-500 gap-2 flex-col col-span-2 row-span-3 flex items-center justify-center"
+        className="col-span-2 row-span-3"
       >
         <TechStackCard />
-      </motion.div>
+      </motion.article>
 
-      <motion.div
+      <motion.article
         variants={childrenVariant}
-        className="test-border relative bg-purple-500 row-span-3 col-span-2"
+        className=" row-span-3 col-span-2"
       >
         <WeatherCard />
-      </motion.div>
+      </motion.article>
 
-      <motion.a
+      <motion.article
         variants={childrenVariant}
-        whileHover={{
-          scale: 1.02,
-          backgroundColor: 'rgba(161, 161, 170, 0.5)',
-        }}
-        transition={{ duration: 0.3 }}
-        className="test-border  overflow-hidden    object-cover hover:cursor-pointer flex-col relative  bg-firstAccent justify-center col-span-4 row-span-3 flex items-center "
+        className="col-span-4 row-span-3"
       >
         <GithubCard />
-      </motion.a>
+      </motion.article>
 
-      <motion.div
+      <motion.article
         variants={childrenVariant}
-        className="test-border  col-span-2 bg-red-500 row-span-3 text-4xl"
+        className="col-span-2 row-span-3"
       >
         <LanguageCard />
-      </motion.div>
+      </motion.article>
 
-      <motion.a
+      <motion.article
         variants={childrenVariant}
-        whileHover={{
-          scale: 1.02,
-          backgroundColor: 'rgba(161, 161, 170, 0.5)',
-        }}
-        transition={{ duration: 0.3 }}
-        className=" text-4xl test-border   relative overflow-hidden  col-span-4 hover:cursor-pointer row-span-3 "
+        className="col-span-4 row-span-3"
         onClick={handleViewProjects}
       >
         <ProjectCard />
-      </motion.a>
+      </motion.article>
 
-      <motion.button
+      <motion.article
         variants={childrenVariant}
-        transition={{ duration: 0.3 }}
-        whileHover={{ scale: 1.03, filter: 'brightness(110%)' }}
-        className="test-border  relative flex flex-col text-xl bg-blue-500 col-span-2 row-span-3"
+        className="col-span-2 row-span-3"
       >
         <MailCard />
-      </motion.button>
+      </motion.article>
     </motion.section>
   );
 };

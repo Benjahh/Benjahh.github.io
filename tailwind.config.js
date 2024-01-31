@@ -22,11 +22,9 @@ module.exports = {
         bebasNeue: ['Bebas Neue', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
-      fontSize: {
-        heroSize: '10rem',
-      },
+
       colors: {
-        firstAccent: '#0F0F0F',
+        firstAccent: '#EBEB5E',
         secondAccent: '#27272A',
         thirdAccent: '#A1A1AA',
       },

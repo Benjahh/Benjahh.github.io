@@ -27,8 +27,9 @@ export const HeroCard = () => {
   };
 
   return (
-    <header className="  absolute left-0 m-10 flex flex-col  max-w-4xl gap-8 bottom-0">
+    <motion.header className="test-border  bg-secondAccent ">
       <motion.h1
+        className="absolute left-0 lg:m-12"
         initial="hidden"
         animate="visible"
         variants={variant}
@@ -43,7 +44,7 @@ export const HeroCard = () => {
           >
             {word.map((element, subIdx) => (
               <motion.div
-                className="w-7 items-center justify-center flex"
+                className=" items-center justify-center  flex"
                 variants={childrenVariant}
                 key={subIdx}
               >
@@ -51,7 +52,7 @@ export const HeroCard = () => {
                   variants={variant}
                   initial="hidden"
                   animate="visible"
-                  className="block font-bebasNeue w-auto h-auto text-white text-7xl"
+                  className=" font-bebasNeue w-[40px] h-[100px] flex items-center justify-center text-firstAccent text-8xl line-"
                 >
                   {element}
                 </motion.div>
@@ -60,11 +61,11 @@ export const HeroCard = () => {
           </motion.div>
         ))}
       </motion.h1>
-      <motion.p className=" bottom-0 left-0 text-2xl font-semibold  font-montserrat  text-thirdAccent">
+      <motion.p className=" absolute lg:m-12 bottom-0 left-0 text-3xl font-semibold max-w-6xl  font-montserrat  text-thirdAccent">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti animi
         rem accusantium porro maiores cum laborum natus hic doloribus aut iste
         unde explicabo dolorum, reprehenderit dolor. Unde adipisci nesciunt cum!
-      </motion.p>{' '}
-    </header>
+      </motion.p>
+    </motion.header>
   );
 };
