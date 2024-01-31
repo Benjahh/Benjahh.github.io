@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
-export const Weather = () => {
+export const WeatherCard = () => {
   const [weather, setWeather] = useState('');
   const [time, setTime] = useState('');
 
-  console.log(time);
+  console.log(weather);
 
   const getTime = (timezone) => {
     const localTime = new Date().getTime();
     const localOffset = new Date().getTimezoneOffset() * 60000;
     const currentUtcTime = localOffset + localTime;
     const cityOffset = currentUtcTime + 1000 * timezone;
-    const cityTime = new Date(cityOffset).toTimeString().split('')[0];
-    setTime(cityTime[0]);
+    const cityTime = new Date(cityOffset).toTimeString().split('');
+    setTime(cityTime.splice(0, 5));
   };
 
   const fetchWeather = () => {
@@ -44,10 +44,21 @@ export const Weather = () => {
     <div className="">
       {time && (
         <div>
-          <div className="absolute left-0 top-0 m-10 font-bebasNeue text-2xl tracking-wider">
-            <br />
+          <div className="absolute left-0 top-0 m-10 flex flex-col font-bebasNeue text-2xl ">
+            <span>Asuncion, {weather.name}</span>
           </div>
-          <div className="absolute  bottom-0 right-0 font-montserra text-4xl m-10">
+          <div>
+            <div className="absolute left-0 bottom-0 m-10 flex flex-col font-bebasNeue text-2xl ">
+              <span> {weather.weather[0].main}</span>
+              <img
+                className=" h-10 w-1'"
+                src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+                alt=""
+              />
+              <span>{weather.main.temp} °C</span>
+            </div>
+          </div>
+          <div className="absolute  bottom-0 right-0 font-bebasNeue text-4xl m-10">
             {time}
           </div>
         </div>

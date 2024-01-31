@@ -1,6 +1,6 @@
-import { testArray } from '@/components/ProjectGrid';
+import { testArray } from '@/components/utils/ProjectGrid';
 
-export const ProjectCard = ({ id, handleProjectId }) => {
+export const IndividualProjectCard = ({ id, handleProjectId }) => {
   console.log(id);
   const toView = testArray.find((project) => project.id == id);
   const { name } = toView;

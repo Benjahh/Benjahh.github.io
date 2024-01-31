@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { heroText } from '@/lib/data';
 
-export const Hero = () => {
+export const HeroCard = () => {
   const words = heroText.map(({ text }) => [...text, ' ']);
   const variant = {
     hidden: {
@@ -27,7 +27,7 @@ export const Hero = () => {
   };
 
   return (
-    <header className=" flex flex-col gap-4">
+    <header className="  absolute left-0 m-10 flex flex-col  max-w-4xl gap-8 bottom-0">
       <motion.h1
         initial="hidden"
         animate="visible"
@@ -60,6 +60,11 @@ export const Hero = () => {
           </motion.div>
         ))}
       </motion.h1>
+      <motion.p className=" bottom-0 left-0 text-2xl font-semibold  font-montserrat  text-thirdAccent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti animi
+        rem accusantium porro maiores cum laborum natus hic doloribus aut iste
+        unde explicabo dolorum, reprehenderit dolor. Unde adipisci nesciunt cum!
+      </motion.p>{' '}
     </header>
   );
 };
