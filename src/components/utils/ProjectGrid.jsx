@@ -1,25 +1,6 @@
 import { IndividualProjectCard } from '@/components/cards/IndividualProjectCard';
 import { useState } from 'react';
-
-const Project = ({ testArray, id, handleProjectId }) => {
-  return (
-    <div
-      className={`
-       rounded-xl border-2  text-thirdAccent justify-center
-        bg-firstAccent hover:brightness-75 border-fourthAccent p-4  
-        ${id == 1 && 'row-span-2 col-span-4'}
-        ${id == 2 && 'row-span-4 col-span-2'}
-        ${id == 3 && 'row-span-2 col-span-2'}
-        ${id == 4 && 'row-span-4 col-span-2'}
-        ${id == 5 && 'row-span-2 col-span-2'}
-        ${id == 6 && 'row-span-2 col-span-2 '}
-        `}
-      onClick={() => handleProjectId(id)}
-    >
-      {testArray}
-    </div>
-  );
-};
+import { AnimatePresence, motion } from 'framer-motion';
 
 export const testArray = [
   { name: 'nn1', id: 1 },
@@ -35,24 +16,71 @@ export const ProjectGrid = () => {
   const handleProjectId = (id) => {
     setViewIndividualProject(id);
   };
+  const variant = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-  console.log(viewIndividualProject);
+  const childrenVariant = {
+    hidden: {
+      opacity: 0,
+      y: '190%',
+      transition: {
+        ease: 'easeIn',
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: 'easeOut',
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: '200%',
+    },
+  };
 
   return (
-    <section className="relative  ">
-      <div
-        className="grid auto-rows-[80px]
-        grid-cols-6 gap-4 "
+    <>
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={variant}
+        className="grid-cols-6 gap-4 grid auto-rows-[80px] relative"
       >
-        {testArray.map(({ name, id }) => (
-          <Project
-            handleProjectId={handleProjectId}
-            key={id}
-            id={id}
-            testArray={name}
-          />
-        ))}
-      </div>
+        <AnimatePresence>
+          {testArray.map(({ name, id }) => (
+            <motion.div
+              initial="hidden"
+              key={id}
+              animate="visible"
+              exit={{ duration: 2, opacity: 0 }}
+              variants={childrenVariant}
+              className={`
+           test-border bg-thirdAccent
+             ${id == 1 && 'row-span-2 col-span-4'}
+             ${id == 2 && 'row-span-4 col-span-2'}
+             ${id == 3 && 'row-span-2 col-span-2'}
+             ${id == 4 && 'row-span-4 col-span-2'}
+             ${id == 5 && 'row-span-2 col-span-2'}
+             ${id == 6 && 'row-span-2 col-span-2 '}
+             `}
+              onClick={() => handleProjectId(id)}
+            >
+              {name}
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.section>
 
       {viewIndividualProject && (
         <IndividualProjectCard
@@ -60,6 +88,6 @@ export const ProjectGrid = () => {
           id={viewIndividualProject}
         />
       )}
-    </section>
+    </>
   );
 };

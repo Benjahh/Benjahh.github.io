@@ -18,10 +18,9 @@ export const Home = () => {
     <section className="page__wrapper overflow-visible ">
       <HomeGrid handleViewProjects={handleViewProjects} />
       {viewProjects && (
-        <>
-          <div className="w-full max-w-[600px] self-center border "></div>
+        <div className="relative">
           <ProjectGrid />
-        </>
+        </div>
       )}
     </section>
   );
