@@ -7,8 +7,9 @@ export const ResumeCard = () => {
   return (
     <motion.div
       whileHover={whileHoverStyle}
-      transition={{ duration: 0.3 }}
-      className="card__border  bg-firstAccent gap-8 hover:cursor-pointer"
+      whileTap={whileHoverStyle}
+      transition={{ duration: 0.2 }}
+      className="card__border gap-2  bg-firstAccent hover:cursor-pointer"
     >
       <FiDownload className="card__link top-0 right-0" size={20} />
       <FaFilePdf className="card__svg" />

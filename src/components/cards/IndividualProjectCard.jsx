@@ -10,7 +10,6 @@ export const IndividualProjectCard = ({
   handleViewProjects,
 }) => {
   const toView = testArray.find((project) => project.id == id);
-  const { name } = toView;
 
   return (
     <article

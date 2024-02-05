@@ -9,8 +9,8 @@ import {
 
 export const TechStackCard = () => {
   return (
-    <div className="card__border gap-2 bg-secondAccent">
-      <div className="grid-cols-3 items-center justify-items-center grid grid-rows-2 h-full w-full">
+    <div className="card__border bg-secondAccent">
+      <div className="grid-cols-3 items-center justify-items-center gap-1 grid grid-rows-2 h-full w-full">
         {techStack.map(({ techName, id, TechIcon }) => (
           <TooltipProvider delayDuration="200" key={id}>
             <Tooltip>

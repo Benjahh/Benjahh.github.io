@@ -43,17 +43,19 @@ export const WeatherCard = () => {
       {time && (
         <div className="card__border bg-secondAccent ">
           <header className="card__title ">
-            <h1>Asuncion, {weather.name}</h1>
+            <h1 className="flex items-start  flex-col card__svgText">
+              Asuncion, <span>{weather.name}</span>
+            </h1>
           </header>
 
           <section className="flex justify-between  w-full h-full">
-            <p className="flex flex-col self-end card__description">
+            <p className="flex flex-col self-end card__svgText">
               <span> {weather.weather[0].main}</span>
-              <span> {weather.weather[0].description}</span>
+
               <span> {weather.main.temp} °C</span>
             </p>
 
-            <div className="text-firstAccent self-end font-bebasNeue text-5xl ">
+            <div className="text-firstAccent self-end font-bebasNeue md:text-3xl text-2xl lg:text-4xl ">
               <span>{time}</span>
             </div>
           </section>

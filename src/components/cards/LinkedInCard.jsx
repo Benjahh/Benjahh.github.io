@@ -5,13 +5,15 @@ import { whileHoverStyle } from "@/lib/data";
 
 export const LinkedInCard = () => {
   return (
-    <motion.div
+    <motion.a
+      href="https://www.linkedin.com/in/lucas-ag%C3%BCero/"
       whileHover={whileHoverStyle}
-      transition={{ duration: 0.3 }}
+      whileTap={whileHoverStyle}
+      transition={{ duration: 0.2 }}
       className="hover:cursor-pointer card__border bg-firstAccent"
     >
-      <FiExternalLink className="card__link top-0 right-0" size={20} />
+      <FiExternalLink className="card__link top-0 right-0" />
       <FaLinkedinIn className="card__svg" />
-    </motion.div>
+    </motion.a>
   );
 };

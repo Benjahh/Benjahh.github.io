@@ -169,95 +169,95 @@ export const techStack = [
   {
     id: "1",
     techName: "Next.js",
-    TechIcon: <SiNextdotjs size={40} />,
+    TechIcon: <SiNextdotjs className="card__techIcon" />,
   },
   {
     id: "2",
     techName: "React",
-    TechIcon: <SiReact size={40} />,
+    TechIcon: <SiReact className="card__techIcon" />,
   },
   {
     id: "3",
     techName: "Node.js",
-    TechIcon: <SiNodedotjs size={40} />,
+    TechIcon: <SiNodedotjs className="card__techIcon" />,
   },
   {
     id: "4",
     techName: "Express.js",
-    TechIcon: <SiExpress size={40} />,
+    TechIcon: <SiExpress className="card__techIcon" />,
   },
   {
     id: "5",
     techName: "TailwindCSS",
-    TechIcon: <SiTailwindcss size={40} />,
+    TechIcon: <SiTailwindcss className="card__techIcon" />,
   },
   {
     id: "6",
     techName: "PostgreSQL",
-    TechIcon: <SiPostgresql size={40} />,
+    TechIcon: <SiPostgresql className="card__techIcon" />,
   },
   {
     id: "7",
     techName: "CSS3",
-    TechIcon: <SiCss3 size={40} />,
+    TechIcon: <SiCss3 className="card__techIcon" />,
   },
   {
     id: "8",
     techName: "HTML5",
-    TechIcon: <SiHtml5 size={40} />,
+    TechIcon: <SiHtml5 className="card__techIcon" />,
   },
   {
     id: "9",
     techName: "Javascript",
-    TechIcon: <SiJavascript size={40} />,
+    TechIcon: <SiJavascript className="card__techIcon" />,
   },
 ];
 
 export const cardComponents = [
   {
     id: 1,
-    componentStyle: "col-span-6  row-span-6",
+    componentStyle: "md:col-span-6 col-span-8  row-span-4 md:row-span-6 ",
     Component: <HeroCard />,
   },
   {
     id: 2,
-    componentStyle: "col-span-2 row-span-3",
+    componentStyle: "md:col-span-2 col-span-4 row-span-2 md:row-span-3",
     Component: <LinkedInCard />,
   },
   {
     id: 3,
-    componentStyle: "col-span-2 row-span-3",
+    componentStyle: "md:col-span-2 col-span-4 row-span-2 md:row-span-3",
     Component: <ResumeCard />,
   },
   {
     id: 4,
-    componentStyle: "col-span-2  row-span-3",
+    componentStyle: "md:col-span-2 col-span-4 row-span-2 md:row-span-3",
     Component: <TechStackCard />,
   },
   {
     id: 5,
-    componentStyle: "col-span-2  row-span-3",
+    componentStyle: "md:col-span-2 col-span-4 row-span-2 md:row-span-3",
     Component: <WeatherCard />,
   },
   {
     id: 6,
-    componentStyle: "col-span-4  row-span-3",
+    componentStyle: "md:col-span-4 col-span-8  row-span-3",
     Component: <GithubCard />,
   },
   {
     id: 7,
-    componentStyle: "col-span-2  row-span-3",
+    componentStyle: "md:col-span-2  col-span-4 row-span-2 md:row-span-3",
     Component: <LanguageCard />,
   },
   {
     id: 8,
-    componentStyle: "col-span-4  row-span-3",
-    Component: <ProjectCard />,
+    componentStyle: "md:col-span-2  col-span-4 row-span-2 md:row-span-3",
+    Component: <MailCard />,
   },
   {
     id: 9,
-    componentStyle: "col-span-2  row-span-3",
-    Component: <MailCard />,
+    componentStyle: "md:col-span-4 col-span-8 row-span-3",
+    Component: <ProjectCard />,
   },
 ];
 

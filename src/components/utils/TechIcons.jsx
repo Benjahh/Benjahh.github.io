@@ -1,7 +1,7 @@
 export const TechIcons = ({ TechIcon }) => {
   return (
-    <div className="row-span-1 w-[70px] h-[70px] p-3 bg-opacity-35 bg-black items-center flex flex-col justify-center  rounded-lg col-span-1">
-      <div className="  ">{TechIcon}</div>
+    <div className="row-span-1 card__techIcon p-2 lg:p-3  rounded-lg bg-black items-center flex flex-col justify-center col-span-1">
+      {TechIcon}
     </div>
   );
 };

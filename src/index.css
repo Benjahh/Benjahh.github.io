@@ -12,30 +12,34 @@ body {
 
 .page__wrapper {
   @apply relative w-full
-  max-w-[300px] sm:max-w-[600px] md:max-w-[900px] lg:max-w-[1100px] py-24 h-full flex flex-col gap-5;
+  max-w-[350px] sm:max-w-[600px] md:max-w-[900px] lg:max-w-[1200px] py-8 sm:py-16 lg:py-24 h-full flex flex-col gap-5;
 }
 
 .card__border {
   @apply justify-center relative h-full flex-col bg-opacity-40 items-center
-  flex rounded-2xl lg:p-8;
+  flex rounded-2xl p-4 sm:p-6 lg:p-8;
 }
 
 .card__title {
-  @apply tracking-wide font-bebasNeue lg:text-4xl;
+  @apply tracking-wide font-bebasNeue md:text-3xl sm:text-2xl text-3xl lg:text-4xl;
 }
 
 .card__description {
-  @apply text-thirdAccent font-semibold  font-montserrat lg:text-2xl;
+  @apply text-thirdAccent font-semibold font-montserrat text-lg lg:text-2xl;
 }
 
 .card__link {
-  @apply text-white absolute m-8;
+  @apply absolute m-4 sm:m-6 lg:m-8 h-[15px] w-[15px]  lg:h-[20px] lg:w-[20px];
 }
 
 .card__svg {
-  @apply h-[120px] w-[120px];
+  @apply h-[50px] w-[50px] sm:h-[75px] sm:w-[75px] lg:h-[100px] lg:w-[100px];
 }
 
 .card__svgText {
-  @apply text-white font-bebasNeue tracking-wide text-2xl text-center;
+  @apply text-white font-bebasNeue tracking-wide text-lg sm:text-xl lg:text-3xl text-center;
+}
+
+.card__techIcon {
+  @apply lg:h-[60px] lg:w-[60px] md:w-[40px] md:h-[40px] h-[40px] w-[40px] bg-opacity-35;
 }
