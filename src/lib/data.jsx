@@ -10,6 +10,16 @@ import {
   SiCss3,
 } from "react-icons/si";
 
+import { GithubCard } from "@/components/cards/GithubCard";
+import { HeroCard } from "@/components/cards/HeroCard";
+import { LanguageCard } from "@/components/cards/LanguageCard";
+import { LinkedInCard } from "@/components/cards/LinkedInCard";
+import { MailCard } from "@/components/cards/MailCard";
+import { ProjectCard } from "@/components/cards/ProjectCard";
+import { ResumeCard } from "@/components/cards/ResumeCard";
+import { TechStackCard } from "@/components/cards/TechStackCard";
+import { WeatherCard } from "@/components/cards/WeatherCard";
+
 export const heroText = [
   {
     text: "Lucas Aguero",
@@ -202,3 +212,57 @@ export const techStack = [
     TechIcon: <SiJavascript size={40} />,
   },
 ];
+
+export const cardComponents = [
+  {
+    id: 1,
+    componentStyle: "col-span-6  row-span-6",
+    Component: <HeroCard />,
+  },
+  {
+    id: 2,
+    componentStyle: "col-span-2 row-span-3",
+    Component: <LinkedInCard />,
+  },
+  {
+    id: 3,
+    componentStyle: "col-span-2 row-span-3",
+    Component: <ResumeCard />,
+  },
+  {
+    id: 4,
+    componentStyle: "col-span-2  row-span-3",
+    Component: <TechStackCard />,
+  },
+  {
+    id: 5,
+    componentStyle: "col-span-2  row-span-3",
+    Component: <WeatherCard />,
+  },
+  {
+    id: 6,
+    componentStyle: "col-span-4  row-span-3",
+    Component: <GithubCard />,
+  },
+  {
+    id: 7,
+    componentStyle: "col-span-2  row-span-3",
+    Component: <LanguageCard />,
+  },
+  {
+    id: 8,
+    componentStyle: "col-span-4  row-span-3",
+    Component: <ProjectCard />,
+  },
+  {
+    id: 9,
+    componentStyle: "col-span-2  row-span-3",
+    Component: <MailCard />,
+  },
+];
+
+export const whileHoverStyle = {
+  scale: 1.02,
+  backgroundColor: "rgba(39, 39, 42, 0.5)",
+  color: "#EBEB5E",
+};

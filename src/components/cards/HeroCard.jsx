@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion';
-import { heroText } from '@/lib/data';
+import { motion } from "framer-motion";
+import { heroText } from "@/lib/data";
 
 export const HeroCard = () => {
-  const words = heroText.map(({ text }) => [...text, ' ']);
+  const words = heroText.map(({ text }) => [...text, "\u00A0"]);
+  console.log(words);
   const variant = {
     hidden: {
       opacity: 0,
@@ -17,7 +18,7 @@ export const HeroCard = () => {
 
   const childrenVariant = {
     hidden: {
-      y: '200%',
+      y: "200%",
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.8 },
     },
     visible: {
@@ -27,45 +28,38 @@ export const HeroCard = () => {
   };
 
   return (
-    <motion.header className="test-border  bg-secondAccent ">
-      <motion.h1
-        className="absolute left-0 lg:m-12"
-        initial="hidden"
-        animate="visible"
-        variants={variant}
-        transition={{
-          staggerChildren: 0.025,
-        }}
-      >
-        {words.map((word, idx) => (
-          <motion.div
-            className={`flex overflow-hidden ${idx === 1 && 'pl-16'}`}
-            key={idx}
-          >
-            {word.map((element, subIdx) => (
-              <motion.div
-                className=" items-center justify-center  flex"
-                variants={childrenVariant}
-                key={subIdx}
-              >
+    <motion.header className="card__border gap-6 bg-secondAccent ">
+      <div className="flex flex-col h-full w-full  justify-end gap-4  ">
+        <motion.h1
+          className=" w-full"
+          initial="hidden"
+          animate="visible"
+          variants={variant}
+        >
+          {words.map((word, idx) => (
+            <motion.div
+              className={`flex overflow-hidden ${idx === 1 && "pl-16"}`}
+              key={idx}
+            >
+              {word.map((element, subIdx) => (
                 <motion.div
-                  variants={variant}
-                  initial="hidden"
-                  animate="visible"
-                  className=" font-bebasNeue w-[40px] h-[100px] flex items-center justify-center text-firstAccent text-8xl line-"
+                  variants={childrenVariant}
+                  key={subIdx}
+                  className=" font-bebasNeue  text-firstAccent text-8xl "
                 >
-                  {element}
+                  {element === " " ? "\u00A0" : element}
                 </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
-        ))}
-      </motion.h1>
-      <motion.p className=" absolute lg:m-12 bottom-0 left-0 text-3xl font-semibold max-w-6xl  font-montserrat  text-thirdAccent">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti animi
-        rem accusantium porro maiores cum laborum natus hic doloribus aut iste
-        unde explicabo dolorum, reprehenderit dolor. Unde adipisci nesciunt cum!
-      </motion.p>
+              ))}
+            </motion.div>
+          ))}
+        </motion.h1>
+        <motion.p className="  text-3xl font-semibold max-w-3xl  font-montserrat text-thirdAccent">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          animi rem accusantium porro maiores cum laborum natus hic doloribus
+          aut iste unde explicabo dolorum, reprehenderit dolor. Unde adipisci
+          nesciunt cum!
+        </motion.p>
+      </div>
     </motion.header>
   );
 };

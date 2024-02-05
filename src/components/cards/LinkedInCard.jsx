@@ -1,22 +1,17 @@
-import { FiExternalLink } from 'react-icons/fi';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { FiExternalLink } from "react-icons/fi";
+import { FaLinkedinIn } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { whileHoverStyle } from "@/lib/data";
+
 export const LinkedInCard = () => {
   return (
     <motion.div
-      whileHover={{
-        scale: 1.02,
-        backgroundColor: 'rgba(39, 39, 42, 0.5)',
-        color: '#EBEB5E',
-      }}
+      whileHover={whileHoverStyle}
       transition={{ duration: 0.3 }}
-      className="hover:cursor-pointer test-border bg-firstAccent   "
+      className="hover:cursor-pointer card__border bg-firstAccent"
     >
-      <FiExternalLink
-        className="absolute top-0 text-white right-0 m-10"
-        size={20}
-      />
-      <FaLinkedinIn className="" size={120} />
+      <FiExternalLink className="card__link top-0 right-0" size={20} />
+      <FaLinkedinIn className="card__svg" />
     </motion.div>
   );
 };

@@ -1,8 +1,8 @@
-import { testArray } from '@/components/utils/ProjectGrid';
-import { FaRegWindowClose } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
-import { FiExternalLink } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { testArray } from "@/components/utils/ProjectGrid";
+import { FaRegWindowClose } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export const IndividualProjectCard = ({
   id,
@@ -18,8 +18,8 @@ export const IndividualProjectCard = ({
      top-0  flex-col  
      flex rounded-2xl  "
     >
-      <figure className="bg-secondAccent rounded-t-xl  w-full h-full"></figure>
-      <section className="bg-black    rounded-b-xl p-8  h-full flex flex-col ">
+      <figure className="bg-thirdAccent bg-opacity-40 rounded-t-xl  w-full h-full"></figure>
+      <section className="bg-secondAccent bg-opacity-40 rounded-b-xl p-8  h-full flex flex-col ">
         <div className="gap-2 flex flex-col">
           <h1 className="font-montserrat text-white text-2xl font-bold">
             Full-Stack App
@@ -38,7 +38,7 @@ export const IndividualProjectCard = ({
         <div className="gap-4 flex absolute bottom-0 overflow-visible right-0 m-6 flex-row text-base font-montserrat font-bold self-end">
           <motion.a
             whileHover={{
-              backgroundColor: 'rgb(161 161 170)',
+              backgroundColor: "rgb(161 161 170)",
             }}
             transition={{ duration: 0.3 }}
             href=""
@@ -49,11 +49,12 @@ export const IndividualProjectCard = ({
           </motion.a>
           <motion.a
             whileHover={{
-              backgroundColor: 'rgb(39 39 42)',
+              backgroundColor: "rgb(161 161 170)",
+              color: "rgb(0 0 0)",
             }}
             transition={{ duration: 0.3 }}
             href=""
-            className=" border-secondAccent border w-[170px]  items-center justify-center rounded-lg flex gap-2  text-white px-4 py-3"
+            className=" border-thirdAccent border w-[170px]  items-center justify-center rounded-lg flex gap-2  text-white px-4 py-3"
           >
             <FiExternalLink size={20} />
             <span>Live Demo</span>
@@ -64,7 +65,7 @@ export const IndividualProjectCard = ({
       <motion.button
         whileHover={{
           scale: 1.05,
-          color: '#ffffff',
+          color: "#ffffff",
         }}
         transition={{ duration: 0.3 }}
         className="absolute top-0 right-0 m-6 text-firstAccent hover:cursor-pointer "

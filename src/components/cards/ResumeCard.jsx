@@ -1,24 +1,18 @@
-import { FaFilePdf } from 'react-icons/fa';
-import { FiDownload } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { FaFilePdf } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { whileHoverStyle } from "@/lib/data";
 
 export const ResumeCard = () => {
   return (
     <motion.div
-      whileHover={{
-        scale: 1.02,
-        backgroundColor: 'rgba(39, 39, 42, 0.5)',
-        color: '#EBEB5E',
-      }}
+      whileHover={whileHoverStyle}
       transition={{ duration: 0.3 }}
-      className="test-border font-montserrat bg-firstAccent text-center gap-8 text-2xl hover:cursor-pointer  font-bold text-md  flex-col  "
+      className="card__border  bg-firstAccent gap-8 hover:cursor-pointer"
     >
-      <FiDownload
-        className="text-white  absolute top-0 right-0  m-10"
-        size={20}
-      />
-      <FaFilePdf size={120} />
-      <h1 className="text-white ">My Resume</h1>
+      <FiDownload className="card__link top-0 right-0" size={20} />
+      <FaFilePdf className="card__svg" />
+      <h1 className="card__svgText">My Resume</h1>
     </motion.div>
   );
 };
