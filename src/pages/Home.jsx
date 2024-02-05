@@ -14,13 +14,7 @@ export const Home = () => {
   };
 
   const handleViewProjects = (newState) => {
-    if (viewIndividualProject && newState) {
-      setViewProjects(newState);
-    } else if (viewIndividualProject) {
-      setViewProjects(false);
-    } else {
-      setViewProjects((viewProjects) => !viewProjects);
-    }
+    setViewProjects(viewIndividualProject ? newState || false : !viewProjects);
   };
 
   return (
