@@ -39,7 +39,7 @@ const childrenVariant = {
   },
 };
 
-export const HomeGrid = ({ handleViewProjects }) => {
+export const HomeGrid = ({ handleViewProjects, handleProjectId }) => {
   return (
     <motion.section
       initial="hidden"
@@ -101,7 +101,10 @@ export const HomeGrid = ({ handleViewProjects }) => {
       <motion.article
         variants={childrenVariant}
         className="col-span-4 row-span-3"
-        onClick={handleViewProjects}
+        onClick={() => {
+          handleViewProjects(false);
+          handleProjectId(null);
+        }}
       >
         <ProjectCard />
       </motion.article>
