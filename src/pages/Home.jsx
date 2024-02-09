@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { HomeGrid } from "@/components/utils/HomeGrid";
-import { ProjectGrid } from "@/components/utils/ProjectGrid";
+import { useState } from 'react';
+import { HomeGrid } from '@/components/utils/HomeGrid';
+import { ProjectGrid } from '@/components/utils/ProjectGrid';
 
 export const Home = () => {
   const [viewProjects, setViewProjects] = useState(false);

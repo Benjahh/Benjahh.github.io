@@ -1,5 +1,5 @@
-import { Home } from "@/pages/home";
-import { Footer } from "./components/utils/Footer";
+import { Home } from '@/pages/home';
+import { Footer } from './components/utils/Footer';
 
 function App() {
   return (
