@@ -1,11 +1,11 @@
 export const Footer = () => {
   return (
-    <footer className="py-6 text-lg font-montserrat ">
+    <footer className="pb-3 md:pb-6 text-sm md:text-lg flex flex-col items-center justify-center  text-white font-montserrat ">
       <h2>2023 - PRESENT © Lucas Agüero</h2>
       <p>
-        Built with <span className="text-white font-bold">ReactJS</span>,
-        <span className="text-white font-bold"> Framer Motion</span> and
-        <span className="text-white font-bold"> Tailwindcss</span>.
+        Built with <span className=" font-bold">ReactJS</span>,
+        <span className="font-bold"> Framer Motion</span> and
+        <span className="font-bold"> Tailwindcss</span>.
       </p>
     </footer>
   );

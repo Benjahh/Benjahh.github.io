@@ -13,35 +13,31 @@ export const IndividualProjectCard = ({
 
   return (
     <article
-      className="text-white  w-full h-full
-     top-0  flex-col  
+      className=" w-full h-full
+      flex-col  
      flex rounded-2xl  "
     >
-      <figure className="bg-thirdAccent bg-opacity-40 rounded-t-xl  w-full h-full"></figure>
-      <section className="bg-secondAccent bg-opacity-40 rounded-b-xl p-8  h-full flex flex-col ">
-        <div className="gap-2 flex flex-col">
-          <h1 className="font-montserrat text-white text-2xl font-bold">
-            Full-Stack App
-          </h1>
-          <header className="font-medium text-firstAccent font-bebasNeue text-4xl tracking-wide">
-            Ai Image Generation App
-          </header>
-          <p className="font-montserrat text-xl font-medium text-thirdAccent">
+      <figure className="bg-thirdAccent bg-opacity-40 rounded-t-xl  "></figure>
+      <section className=" bg-secondAccent card__border">
+        <div className=" gap-1 md:gap-2 flex flex-col">
+          <h1 className="card__title">Full-Stack App</h1>
+          <header className="card__title">Ai Image Generation App</header>
+          <p className="card__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
             saepe reprehenderit laudantium qui odio quisquam dolores adipisci
             error optio deserunt vel dolor, expedita dolore voluptatibus
             aspernatur velit voluptas! A, reiciendis.
           </p>
         </div>
-        <div className="bg-white h-[1px] my-6" />
-        <div className="gap-4 flex absolute bottom-0 overflow-visible right-0 m-6 flex-row text-base font-montserrat font-bold self-end">
+        <div className="bg-white h-[1px] my-2 lg:my-6" />
+        <div className="flex flex-row absolute bottom-0 right-0 gap-2 lg:gap-4 m-4 lg:m-8">
           <motion.a
             whileHover={{
               backgroundColor: "rgb(161 161 170)",
             }}
             transition={{ duration: 0.3 }}
             href=""
-            className="bg-white rounded-lg w-[170px] items-center justify-center text-black flex gap-2 px-4 py-3"
+            className="project__button text-black bg-white"
           >
             <FaGithub size={20} />
             <span>Source Code</span>
@@ -53,7 +49,7 @@ export const IndividualProjectCard = ({
             }}
             transition={{ duration: 0.3 }}
             href=""
-            className=" border-thirdAccent border w-[170px]  items-center justify-center rounded-lg flex gap-2  text-white px-4 py-3"
+            className="project__button border text-white border-thirdAccent"
           >
             <FiExternalLink size={20} />
             <span>Live Demo</span>
