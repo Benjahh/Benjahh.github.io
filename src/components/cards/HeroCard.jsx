@@ -51,11 +51,10 @@ export const HeroCard = () => {
             </motion.div>
           ))}
         </motion.h1>
-        <motion.p className=" lg:text-3xl md:text-2xl sm:text-xl text-base font-semibold max-w-3xl  font-montserrat text-thirdAccent">
+        <motion.p className=" lg:text-3xl md:text-2xl text-xl font-semibold max-w-3xl  font-montserrat text-thirdAccent">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
           animi rem accusantium porro maiores cum laborum natus hic doloribus
-          aut iste unde explicabo dolorum, reprehenderit dolor. Unde adipisci
-          nesciunt cum!
+          aut!
         </motion.p>
       </div>
     </motion.header>

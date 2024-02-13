@@ -45,5 +45,5 @@ body {
 }
 
 .project__button {
-  @apply lg:w-[170px] w-[110px] items-center text-xs justify-center font-semibold rounded-lg flex gap-1 lg:gap-2 px-2 md:px-4 py-2;
+  @apply lg:w-[170px] w-[110px] items-center text-xs lg:text-base justify-center font-semibold rounded-lg flex gap-1 lg:gap-2 px-2 md:px-4 py-2;
 }

@@ -12,14 +12,12 @@ export const IndividualProjectCard = ({
   const toView = testArray.find((project) => project.id == id);
 
   return (
-    <article
-      className=" w-full h-full
-      flex-col  
-     flex rounded-2xl  "
-    >
-      <figure className="bg-thirdAccent bg-opacity-40 rounded-t-xl  "></figure>
-      <section className=" bg-secondAccent card__border">
-        <div className=" gap-1 md:gap-2 flex flex-col">
+    <article className="rounded-xl flex flex-col h-full w-full justify-center items-center  gap-4">
+      <figure className="bg-firstAccent opacity-40  rounded-xl border w-full h-1/2">
+        s
+      </figure>
+      <section className="bg-secondAccent card__border">
+        <div className=" gap-1 md:gap-2 flex flex-col ">
           <h1 className="card__title">Full-Stack App</h1>
           <header className="card__title">Ai Image Generation App</header>
           <p className="card__description">
@@ -29,8 +27,8 @@ export const IndividualProjectCard = ({
             aspernatur velit voluptas! A, reiciendis.
           </p>
         </div>
-        <div className="bg-white h-[1px] my-2 lg:my-6" />
-        <div className="flex flex-row absolute bottom-0 right-0 gap-2 lg:gap-4 m-4 lg:m-8">
+        <div className="bg-white h-[1px] my-4 lg:my-6" />
+        <div className="flex flex-row  gap-2  lg:gap-4 w-full items-end justify-end">
           <motion.a
             whileHover={{
               backgroundColor: "rgb(161 161 170)",

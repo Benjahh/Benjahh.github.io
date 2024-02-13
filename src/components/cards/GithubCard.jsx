@@ -20,7 +20,7 @@ export const GithubCard = () => {
       </header>
 
       <FiExternalLink className="top-0 right-0 card__link" />
-      <FaGithub className="absolute top-0 lg:h-[40px] lg:w-[40px] w-[30px] h-[30px]  left-0  m-4 sm:m-6 lg:m-8" />
+      <FaGithub className="absolute top-0 w-[40px] h-[40px]  left-0  m-4 sm:m-6 lg:m-8" />
     </motion.a>
   );
 };
