@@ -1,15 +1,7 @@
 import { IndividualProjectCard } from "@/components/cards/IndividualProjectCard";
-import { useState } from "react";
+import { projects } from "@/lib/data";
 import { AnimatePresence, motion } from "framer-motion";
 
-export const testArray = [
-  { name: "nn1", id: 1 },
-  { name: "nn2", id: 2 },
-  { name: "nn3", id: 3 },
-  { name: "nn4", id: 4 },
-  { name: "nn5", id: 5 },
-  { name: "nn6", id: 6 },
-];
 export const ProjectGrid = ({
   handleViewProjects,
   handleProjectId,
@@ -68,31 +60,31 @@ export const ProjectGrid = ({
             className="grid-cols-6 gap-4 grid lg:auto-rows-[100px] auto-rows-[40px] lg:h-[690px] w-full  relative"
           >
             <AnimatePresence>
-              {testArray.map(({ name, id }) => (
+              {projects.map(({ projectId, projectIcon }) => (
                 <motion.div
                   whileHover={{
                     scale: 1.02,
                     backgroundColor: "rgba(39, 39, 42, 0.5)",
                     color: "#EBEB5E",
                   }}
-                  key={id}
+                  key={projectId}
                   exit={{ opacity: 0 }}
                   variants={childrenVariant}
                   className={`
            card__border h-full bg-secondAccent hover:cursor-pointer
-             ${id == 1 && "row-span-2 col-span-4"}
-             ${id == 2 && "row-span-4 col-span-2"}
-             ${id == 3 && "row-span-2 col-span-2"}
-             ${id == 4 && "row-span-4 col-span-2"}
-             ${id == 5 && "row-span-2 col-span-2"}
-             ${id == 6 && "row-span-2 col-span-2 "}
+             ${projectId == 1 && "row-span-2 col-span-4"}
+             ${projectId == 2 && "row-span-4 col-span-2"}
+             ${projectId == 3 && "row-span-2 col-span-2"}
+             ${projectId == 4 && "row-span-4 col-span-2"}
+             ${projectId == 5 && "row-span-2 col-span-2"}
+             ${projectId == 6 && "row-span-2 col-span-2 "}
              `}
                   onClick={() => {
                     handleViewProjects(false);
-                    handleProjectId(id);
+                    handleProjectId(projectId);
                   }}
                 >
-                  {name}
+                  <div className="text-white">{projectIcon}</div>
                 </motion.div>
               ))}
             </AnimatePresence>

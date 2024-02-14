@@ -1,4 +1,4 @@
-import { testArray } from "@/components/utils/ProjectGrid";
+import { projects } from "@/lib/data";
 import { FaRegWindowClose } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
@@ -9,11 +9,11 @@ export const IndividualProjectCard = ({
   handleProjectId,
   handleViewProjects,
 }) => {
-  const toView = testArray.find((project) => project.id == id);
+  const toView = projects.find((project) => project.projectId == id);
 
   return (
-    <article className="rounded-xl flex flex-col h-full w-full justify-center items-center  gap-4">
-      <figure className="bg-firstAccent opacity-40  rounded-xl border w-full h-1/2">
+    <article className="rounded-xl flex flex-col h-full border w-full justify-center items-center  gap-4">
+      <figure className="bg-firstAccent opacity-40  rounded-xl  w-full h-full">
         s
       </figure>
       <section className="bg-secondAccent card__border">
@@ -54,7 +54,6 @@ export const IndividualProjectCard = ({
           </motion.a>
         </div>
       </section>
-
       <motion.button
         whileHover={{
           scale: 1.05,
@@ -69,6 +68,7 @@ export const IndividualProjectCard = ({
       >
         <FaRegWindowClose size={30} />
       </motion.button>
+      Ñ
     </article>
   );
 };

@@ -8,6 +8,7 @@ import {
   SiJavascript,
   SiHtml5,
   SiCss3,
+  SiOpenai,
 } from "react-icons/si";
 
 import { GithubCard } from "@/components/cards/GithubCard";
@@ -33,17 +34,18 @@ export const heroText = [
 export const projects = [
   {
     projectId: "01",
-    projectName: "WebScrapingApp",
+    projecIcon: <SiOpenai />,
+    projectName: "Ai Image Generation",
     projectType: "Practice Project",
     projectRepo: "https://github.com/Benjahh/benjahh.github.io",
     projectLink: "https://facebook.com",
     projectDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magni quam molestiae culpa unde sequi cum nesciunt repellat, similique quia atque eaque suscipit nam possimus quos, labore ipsam velit laboriosam?",
 
-    projectCreation: "2023",
+    projectCreation: "2024",
     projectSkill: [
       {
-        skillName: "NextJS,",
+        skillName: "React,",
         color: "#ff1e7a",
       },
       {
@@ -67,6 +69,7 @@ export const projects = [
   {
     projectId: "02",
     projectName: "ThreadsApp",
+    projecIcon: <SiOpenai />,
     projectType: "Practice Project",
     projectRepo: "https://github.com/Benjahh/benjahh.github.io",
     projectLink: "https://google.com",
@@ -100,6 +103,7 @@ export const projects = [
   {
     projectId: "03",
     projectName: "CarShowcaseApp",
+    projecIcon: <SiOpenai />,
     projectType: "Practice Project",
     projectRepo: "https://github.com/Benjahh/benjahh.github.io",
     projectLink: "https://google.com",
@@ -133,6 +137,7 @@ export const projects = [
   {
     projectId: "04",
     projectName: "BlockChainApp",
+    projectIcon: <SiOpenai />,
     projectType: "Practice Project",
     projectRepo: "https://github.com/Benjahh/benjahh.github.io",
     projectLink: "https://google.com",
