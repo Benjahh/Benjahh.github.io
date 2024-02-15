@@ -1,40 +1,45 @@
-import { projects } from "@/lib/data";
-import { FaRegWindowClose } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
-import { motion } from "framer-motion";
+import { projects } from '@/lib/data';
+import { FaRegWindowClose } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 export const IndividualProjectCard = ({
   id,
   handleProjectId,
   handleViewProjects,
 }) => {
-  const toView = projects.find((project) => project.projectId == id);
+  const project = projects.find((project) => project.projectId == id);
+  const {
+    projectLink,
+    projectRepo,
+    projectCreation,
+    projectDescription,
+    projectName,
+    projectType,
+  } = project;
+
+  console.log(id);
 
   return (
-    <article className="rounded-xl flex flex-col h-full border w-full justify-center items-center  gap-4">
-      <figure className="bg-firstAccent opacity-40  rounded-xl  w-full h-full">
-        s
-      </figure>
-      <section className="bg-secondAccent card__border">
+    <article
+      className="justify-center relative flex-col bg-opacity-40 items-center
+    flex rounded-2xl p-4 sm:p-6 lg:p-8 bg-secondAccent"
+    >
+      <section className="h-full justify-between">
         <div className=" gap-1 md:gap-2 flex flex-col ">
-          <h1 className="card__title">Full-Stack App</h1>
-          <header className="card__title">Ai Image Generation App</header>
-          <p className="card__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-            saepe reprehenderit laudantium qui odio quisquam dolores adipisci
-            error optio deserunt vel dolor, expedita dolore voluptatibus
-            aspernatur velit voluptas! A, reiciendis.
-          </p>
+          <h1 className="card__title">{projectType}</h1>
+          <header className="card__title">{projectName}</header>
+          <p className="card__description">{projectDescription}</p>
         </div>
         <div className="bg-white h-[1px] my-4 lg:my-6" />
         <div className="flex flex-row  gap-2  lg:gap-4 w-full items-end justify-end">
           <motion.a
             whileHover={{
-              backgroundColor: "rgb(161 161 170)",
+              backgroundColor: 'rgb(161 161 170)',
             }}
             transition={{ duration: 0.3 }}
-            href=""
+            href={projectLink}
             className="project__button text-black bg-white"
           >
             <FaGithub size={20} />
@@ -42,12 +47,12 @@ export const IndividualProjectCard = ({
           </motion.a>
           <motion.a
             whileHover={{
-              backgroundColor: "rgb(161 161 170)",
-              color: "rgb(0 0 0)",
+              backgroundColor: 'rgb(235 235 94)',
+              color: 'rgb(0 0 0)',
             }}
             transition={{ duration: 0.3 }}
-            href=""
-            className="project__button border text-white border-thirdAccent"
+            href={projectRepo}
+            className="project__button border text-white border-firstAccent"
           >
             <FiExternalLink size={20} />
             <span>Live Demo</span>
@@ -57,7 +62,7 @@ export const IndividualProjectCard = ({
       <motion.button
         whileHover={{
           scale: 1.05,
-          color: "#ffffff",
+          color: '#ffffff',
         }}
         transition={{ duration: 0.3 }}
         className="absolute top-0 right-0 m-6 text-firstAccent hover:cursor-pointer "
@@ -68,7 +73,6 @@ export const IndividualProjectCard = ({
       >
         <FaRegWindowClose size={30} />
       </motion.button>
-      Ñ
     </article>
   );
 };

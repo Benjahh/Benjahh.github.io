@@ -1,6 +1,6 @@
-import { IndividualProjectCard } from "@/components/cards/IndividualProjectCard";
-import { projects } from "@/lib/data";
-import { AnimatePresence, motion } from "framer-motion";
+import { IndividualProjectCard } from '@/components/cards/IndividualProjectCard';
+import { projects } from '@/lib/data';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export const ProjectGrid = ({
   handleViewProjects,
@@ -26,21 +26,21 @@ export const ProjectGrid = ({
   const childrenVariant = {
     hidden: {
       opacity: 0,
-      y: "190%",
+      y: '190%',
       transition: {
-        ease: "easeIn",
+        ease: 'easeIn',
       },
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
     exit: {
       opacity: 0,
-      y: "200%",
+      y: '200%',
     },
   };
 
@@ -64,27 +64,27 @@ export const ProjectGrid = ({
                 <motion.div
                   whileHover={{
                     scale: 1.02,
-                    backgroundColor: "rgba(39, 39, 42, 0.5)",
-                    color: "#EBEB5E",
+                    backgroundColor: 'rgba(39, 39, 42, 0.5)',
+                    color: '#EBEB5E',
                   }}
                   key={projectId}
                   exit={{ opacity: 0 }}
                   variants={childrenVariant}
                   className={`
            card__border h-full bg-secondAccent hover:cursor-pointer
-             ${projectId == 1 && "row-span-2 col-span-4"}
-             ${projectId == 2 && "row-span-4 col-span-2"}
-             ${projectId == 3 && "row-span-2 col-span-2"}
-             ${projectId == 4 && "row-span-4 col-span-2"}
-             ${projectId == 5 && "row-span-2 col-span-2"}
-             ${projectId == 6 && "row-span-2 col-span-2 "}
+             ${projectId == 1 && 'row-span-2 col-span-4'}
+             ${projectId == 2 && 'row-span-4 col-span-2'}
+             ${projectId == 3 && 'row-span-2 col-span-2'}
+             ${projectId == 4 && 'row-span-4 col-span-2'}
+             ${projectId == 5 && 'row-span-2 col-span-2'}
+             ${projectId == 6 && 'row-span-2 col-span-2 '}
              `}
                   onClick={() => {
                     handleViewProjects(false);
                     handleProjectId(projectId);
                   }}
                 >
-                  <div className="text-white">{projectIcon}</div>
+                  {projectIcon}
                 </motion.div>
               ))}
             </AnimatePresence>
