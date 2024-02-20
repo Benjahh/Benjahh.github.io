@@ -2,12 +2,12 @@
 
 module.exports = {
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
-  prefix: '',
+  prefix: "",
   theme: {
     extend: {
       backgroundImage: {
@@ -19,14 +19,14 @@ module.exports = {
       },
 
       fontFamily: {
-        bebasNeue: ['Bebas Neue', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        bebasNeue: ["Bebas Neue", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
 
       colors: {
-        firstAccent: '#EBEB5E',
-        secondAccent: '#27272A',
-        thirdAccent: '#A1A1AA',
+        firstAccent: "#EBEB5E",
+        secondAccent: "#27272A",
+        thirdAccent: "#A1A1AA",
       },
     },
   },
