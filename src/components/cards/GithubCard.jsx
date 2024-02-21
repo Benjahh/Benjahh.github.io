@@ -1,7 +1,7 @@
-import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
-import { motion } from "framer-motion";
-import { whileHoverStyle } from "@/lib/data";
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import { whileHoverStyle } from '@/lib/data';
 
 export const GithubCard = () => {
   return (
@@ -20,7 +20,7 @@ export const GithubCard = () => {
       </header>
 
       <FiExternalLink className="top-0 right-0 card__link" />
-      <FaGithub className="absolute top-0 w-[40px] h-[40px]  left-0  m-4 sm:m-6 lg:m-8" />
+      <FaGithub className="absolute top-0 xl:w-[60px] xl:h-[60px] lg:w-[40px] lg:h-[40px] md:w-[30px] sm:h-[50px] sm:w-[50px]  h-[30px] w-[30px]   left-0  m-4 sm:m-6 lg:m-8" />
     </motion.a>
   );
 };

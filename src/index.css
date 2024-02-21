@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +12,7 @@ body {
 
 .page__wrapper {
   @apply relative w-full
-  max-w-[350px] sm:max-w-[600px] md:max-w-[900px] lg:max-w-[1200px] py-8 sm:py-16 lg:py-24 h-full flex flex-col gap-5;
+  max-w-[350px] xl:max-w-[1700px] sm:max-w-[600px] md:max-w-[900px] lg:max-w-[1200px] py-8 sm:py-16 lg:py-24 h-full flex flex-col gap-5;
 }
 
 .card__border {
@@ -21,29 +21,29 @@ body {
 }
 
 .card__title {
-  @apply tracking-wide font-bebasNeue md:text-3xl sm:text-2xl text-3xl lg:text-4xl;
+  @apply tracking-wide font-bebasNeue md:text-3xl sm:text-5xl text-3xl  xl:text-6xl lg:text-4xl;
 }
 
 .card__description {
-  @apply text-thirdAccent font-semibold font-montserrat text-lg lg:text-2xl;
+  @apply text-thirdAccent font-semibold font-montserrat text-lg sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl;
 }
 
 .card__link {
-  @apply absolute m-4 sm:m-6 lg:m-8 h-[15px] w-[15px]  lg:h-[20px] lg:w-[20px];
+  @apply absolute m-4 sm:m-6 lg:m-8 xl:w-[30px] xl:h-[30px] h-[15px] w-[15px] sm:w-[25px] sm:h-[25px] md:h-[20px] md:w-[20px];
 }
 
 .card__svg {
-  @apply h-[50px] w-[50px] sm:h-[75px] sm:w-[75px] lg:h-[100px] lg:w-[100px];
+  @apply h-[50px]  w-[50px] md:h-[70px] md:w-[70px] sm:h-[95px] sm:w-[95px] lg:h-[100px] lg:w-[100px]  xl:w-[140px] xl:h-[140px];
 }
 
 .card__svgText {
-  @apply text-white font-bebasNeue tracking-wide text-lg sm:text-xl lg:text-3xl text-center;
+  @apply text-white  xl:text-5xl font-bebasNeue tracking-wide text-xl sm:text-3xl md:text-2xl lg:text-3xl text-center;
 }
 
 .card__techIcon {
-  @apply lg:h-[60px] lg:w-[60px] md:w-[40px] md:h-[40px] h-[40px] w-[40px] bg-opacity-35;
+  @apply xl:w-[90px] xl:h-[90px] lg:h-[60px] lg:w-[60px] md:w-[50px] md:h-[50px] sm:h-[60px] sm:w-[60px] h-[40px] w-[40px] bg-opacity-35;
 }
 
 .project__button {
-  @apply lg:w-[170px] w-[110px] items-center text-xs lg:text-base justify-center font-semibold rounded-lg flex gap-1 lg:gap-2 px-2 md:px-4 py-2;
+  @apply lg:w-[170px] xl:w-[180px]  w-[110px] md:w-[150px] sm:w-[160px] items-center text-xs xl:text-xl  sm:text-xl justify-center font-semibold rounded-lg flex gap-1 lg:gap-2 px-2 md:px-4 py-2;
 }

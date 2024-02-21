@@ -65,13 +65,13 @@ export const IndividualProjectCard = ({
           color: '#ffffff',
         }}
         transition={{ duration: 0.3 }}
-        className="absolute top-0 right-0 m-6 text-firstAccent hover:cursor-pointer "
+        className="absolute top-0 right-0 m-4 sm:m-6 lg:m-8 text-firstAccent hover:cursor-pointer "
         onClick={() => {
           handleProjectId(null);
           handleViewProjects(true);
         }}
       >
-        <FaRegWindowClose size={30} />
+        <FaRegWindowClose className="lg:w-[30px] lg:h-[30px] sm:w-[35px] sm:h-[35px] md:w-[30px] h-[25px] w-[25px]  " />
       </motion.button>
     </article>
   );

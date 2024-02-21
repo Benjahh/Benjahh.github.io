@@ -50,14 +50,14 @@ export const ProjectGrid = ({
       animate="visible"
       variants={variant}
       transition={{ duration: 0.5, delayChildren: 0.5 }}
-      className="relative  md:max-w-[700px] w-full   flex  self-center "
+      className="relative  md:max-w-[700px] xl:max-w-[1000px] w-full   flex  self-center "
     >
       <AnimatePresence>
         {viewProjects && (
           <motion.div
             exit={{ opacity: 0 }}
             variants={childrenVariant}
-            className="grid-cols-6 gap-4 grid lg:auto-rows-[100px] auto-rows-[40px] lg:h-[690px] w-full  relative"
+            className="grid-cols-6 gap-4 grid xl:auto-rows-[110px] lg:auto-rows-[80px] sm:auto-rows-[70px] md:auto-rows-[70px]  auto-rows-[40px] lg:h-[690px] w-full  relative"
           >
             <AnimatePresence>
               {projects.map(({ projectId, projectIcon }) => (
